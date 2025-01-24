@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Matemasie&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.523), rgba(255, 255, 255, 0.436)), url(../Assets/Pagina_Principal/Fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.inicio .contenido {
+    max-width: 1100px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.inicio header {
+    display: flex;
+    justify-content: center; /* Esto centra el contenido en relación al header */
+    margin-top: 30px;
+    padding: 0 30px;
+    align-items: center;
+    background-color: #387F39;
+    border-radius: 25px;
+    position: relative; /* Necesario para que funcione el posicionamiento absoluto */
+    height: 60px;
+}
+
+.inicio .atras {
+    position: absolute;
+    left: 30px; /* Esto asegura que el icono esté a la izquierda */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.inicio .atras a {
+    color: #F6E96B;
+    font-size: 35px; /* Ajusta el tamaño del icono de la flecha */
+    text-decoration: none;
+}
+
+#level {
+    font-size: 30px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+    line-height: 1;
+    position: absolute;
+    left: 50%; /* Mueve el centro de la caja del texto */
+    transform: translateX(-50%); /* Centra la caja del texto */
+}
+
+.nombre-principal {
+    margin: 30px 0;
+}
+
+.nombre-principal h1 {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #f6e86ba2;
+    border-radius: 30px;
+    color: black;
+    font-family: "Matemasie", sans-serif;
+    text-align: center;
+    padding: 10px 20px; /* Añade relleno para mejor apariencia */
+    margin: 0px 160px;
+}
+
+.contenedor_Q{
+    text-align: center;
+    background-color: #a2ca71aa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 400px;
+}
+
+#question{
+    font-size: 30px;
+}
+
+.container {
+    text-align: center;
+    background-color: #a2ca71aa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 400px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #73BBA3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+
+button:hover {
+    background-color: #268f6c;
+}
+
+button img {
+    width: 100px; /* Tamaño de las imágenes*/
+    height: 100px;
+    border-radius: 4px;
+    transition: transform 0.3s, border 0.3s;
+}
+
+button:hover img {
+    transform: scale(1.1);
+}
+
+#result {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#retry{
+    margin: 0px 300px;
+    background-color: #387F39;
+}
+
+#retry:hover {
+    background-color: #268f6c;
+}

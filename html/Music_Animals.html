@@ -1,0 +1,113 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Animals Day 🐸🐼🐷</title>
+        <link rel="shortcut icon" href="../Assets/Pagina_Principal/Principal.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+        <script src="https://kit.fontawesome.com/5e6427e208.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../Css/Music_Animals.css">
+    </head>
+    <body>
+        <!-- Sección Inicio Nav -->
+        <section id="inicio" class="inicio">
+            <div class="contenido">
+                <header>
+                    <div class="atras">
+                        <a href="../index.html">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div id="level-display"></div>
+                </header>
+                <div class="nombre-principal">
+                    <h1>Music zone</h1>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <!-- Cards con imágenes -->
+                <div class="card" data-video="../Assets/Videos/HICKORY DICKORY DOCK En Inglés, Canciones infantiles.mp4" >
+                    <h3 class="card-title">Hickory Dickory Dock</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/HICKORY_DICKORY_DOCK.jpg" alt="Imagen 9">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/The Iguana And The Lazy Bear - Karaoke(240p).mp4" >
+                    <h3 class="card-title">The Iguana drank coffee</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/iguana.jpg" alt="Imagen 2">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/Old MacDonald Had a Farm • Nursery Rhymes Song with Lyrics • Animated Cartoon for Kids.mp4" >
+                    <h3 class="card-title">Old MacDonald Had a Farm</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/Viejo_granjero.jpeg" alt="Imagen 3">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/Los Pollitos Dicen Pio Pio Pio - En Inglés.mp4" >
+                    <h3 class="card-title">The chicks say Peep Peep Peep</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/los_pollitos_dicen_piop_pio_pio.jpg" alt="Imagen 4">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/LA VACA LOLA EN INGLES, Lola the cow.mp4" >
+                    <h3 class="card-title">Lola the cow</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/vaca_lola.jpg" alt="Imagen 5">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/The serpent of very hot weather Nursery Rhyme for children La serpiente de tierra Caliente1.mp4" >
+                    <h3 class="card-title">The serpent of very hot weather</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/serpiente_de_tierra_caliente.jpg" alt="Imagen 6">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/La Cucaracha (English) _ Kids Sing-Along with Lyrics [SONG].mp4" >
+                    <h3 class="card-title">The cockroach can't longer walk</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/cucaracha.png" alt="Imagen 7">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/ITSY BITSY SPIDER - Song for Children.mp4" >
+                    <h3 class="card-title">Itsy Bitsy Spider</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/araña_que_trepa.jpg" alt="Imagen 8">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/CINCO PATITOS En Inglés, Canciones infantiles, Five Little Ducks.mp4">
+                    <h3 class="card-title">Five Little Ducks</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/5_patos.jpeg" alt="Imagen 1">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/Down on the Farm Song! Fun Learning SONG for Kids!.mp4" >
+                    <h3 class="card-title">Down on the Farm Song</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/down_in_the_farm.jpeg" alt="Imagen 10">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/Cuckoo a frog was singing - Nursery Rhymes - Toobys.mp4" >
+                    <h3 class="card-title">Cuckoo a frog was singing</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/cucu.jpeg" alt="Imagen 11">
+                    <button>Show Video</button>
+                </div>
+                <div class="card" data-video="../Assets/Videos/The little chick cheep HD Lyrics Text.mp4" >
+                    <h3 class="card-title">The little chick cheep</h3>
+                    <img src="../Assets/Animales/imagenes_puzzle/el_pollito_pio.jpg" alt="Imagen 12">
+                    <button>Show Video</button>
+                </div>
+            
+            
+            <!-- Card grande para el video -->
+             
+                <div id="video-card" class="hidden">
+                    <span id="close-btn">&times;</span>
+                    <div id="video-container">
+                        <video id="video-player" controls>
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="../Js/Music_Animsl.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Animals Day 🐸🐼🐷</title>
+    <link rel="shortcut icon" href="../Assets/Pagina Principal/Principal.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/5e6427e208.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Css/Style_Puzzle.css">
+</head>
+<body>
+    <!-- Sección Inicio Nav -->
+    <section id="inicio" class="inicio">
+        <div class="contenido">
+            <header>
+                <div class="atras">
+                    <a href="../index.html">
+                        <i class="fa-solid fa-circle-arrow-left"></i>
+                    </a>
+                </div>
+                <div id="level-display"></div>
+            </header>
+            <div class="nombre-principal">
+                <h1>Put together the puzzle</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="puzzle-container">
+                <button id="play-btn"><i class="fa-solid fa-play"></i></button>
+                <button id="pause-btn"><i class="fa-solid fa-pause"></i></button>
+                <button id="shuffle-btn"><i class="fa-solid fa-rotate"></i></button>
+            <div id="puzzle-grid">
+                <!-- Las piezas del puzzle se generarán dinámicamente aquí  -->
+            </div>
+        </div>
+
+        <button id="restart-btn" style="display: none;">Reiniciar Juego</button>
+        
+    </section>
+    <script src="../Js/Puzzle.js"></script>
+</body>
+</html>
+
+

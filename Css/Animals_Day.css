@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Matemasie&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.523), rgba(255, 255, 255, 0.436)), url(../Assets/Pagina_Principal/Fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.inicio .contenido {
+    max-width: 1100px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.inicio header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0 30px;
+    align-items: center;
+    background-color: #387F39;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.inicio .atras a {
+    display: flex;
+    align-items: center;
+    color: #F6E96B;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.inicio .atras i {
+    margin-right: 20px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 25px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    font-size: 35px;
+}
+
+.nombre-principal {
+    margin: 30px 0;
+}
+
+.nombre-principal h1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #f6e86ba2;
+    border-radius: 30px;
+    color: black;
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0px 150px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #88D66C;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.tab-button:hover{
+    background-color: #387F39;
+}
+
+/*Nuevo modulo*/
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/*Card styling*/ 
+.card {
+    background-color: #bfdc74a0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;
+    padding-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+Image container styling 
+.image-container {
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+ 
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #090909;
+}
+
+
+/* General button styling */
+.card-content button {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    padding: 10px;
+    transition: background-color 0.2s;
+}
+
+/* Button with icon */
+.card-content button.icon-button {
+    background-color: #f1c40f; /* Color para el primer botón */
+}
+
+.card-content button.icon-button:hover {
+    background-color: #f39c12; /* Color al pasar el ratón */
+}
+
+/* Button with text */
+.card-content button.text-button {
+    background-color: #007bff; /* Color para el botón con texto */
+}
+
+.card-content button.text-button:hover {
+    background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+/* Pause button styling */
+.card-content button.pause-button {
+    background-color: #dc3545; /* Color para el botón de pausa */
+}
+
+.card-content button.pause-button:hover {
+    background-color: #b61e2d; /* Color al pasar el ratón */
+
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nombre-principal h1 {
+        font-size: 40px;
+        margin: 0px 30px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .tab-button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    #cards-container {
+        gap: 15px;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1em;
+    }
+
+    .card-content button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nombre-principal h1 {
+        font-size: 30px;
+        margin: 0px 10px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .tab-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    #cards-container {
+        gap: 10px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .card-content h3 {
+        font-size: 1em;
+    }
+
+    .card-content button {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+}

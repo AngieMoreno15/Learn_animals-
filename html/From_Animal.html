@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Animals Day 🐸🐼🐷</title>
+        <link rel="shortcut icon" href="../Assets/Pagina Principal/Principal.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+        <script src="https://kit.fontawesome.com/5e6427e208.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../Css/From_Animal.css">
+    </head>
+    <body>
+        <!-- Sección Inicio Nav -->
+        <section id="inicio" class="inicio">
+            <div class="contenido">
+                <header>
+                    <div class="atras">
+                        <a href="../index.html">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                        </a>
+                    </div>
+                </header>
+                <div class="nombre-principal">
+                    <h1>Drag the animals to their correct habitat</h1>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <div id="habitat1" class="habitat" data-habitat="selva">
+                    <h2>Jungle Habitat</h2>
+                    <img src="../Assets/Fondos/Selva.jpg" alt="Hábitat Selvático" class="habitat-image">
+                </div>
+                <div id="habitat2" class="habitat" data-habitat="granja">
+                    <h2>Farm Habitat</h2>
+                    <img src="../Assets/Fondos/granja.jpg" alt="Hábitat de Granja" class="habitat-image">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <button id="checkButton" >Verify</button>
+        </section>
+
+        <section>
+            <div class="animals">
+                <div id="animal1" class="animal" draggable="true" data-animal="rooster">
+                    <img src="../Assets/Animales/Gallo.png" alt="Rooster">
+                    <p>Rooster</p>
+                </div>
+                <div id="animal2" class="animal" draggable="true" data-animal="panda">
+                    <img src="../Assets/Animales/OsoPanda.jpg" alt="Panda Bear">
+                    <p>Panda Bear</p>
+                </div>
+                <div id="animal3" class="animal" draggable="true" data-animal="lion">
+                    <img src="../Assets/Animales/Leon.jpeg" alt="Lion">
+                    <p>Lion</p>
+                </div>
+                <div id="animal4" class="animal" draggable="true" data-animal="horse">
+                    <img src="../Assets/Animales/Caballo.jpg" alt="Horse">
+                    <p>Horse</p>
+                </div>
+                <div id="animal5" class="animal" draggable="true" data-animal="canary">
+                    <img src="../Assets/Animales/Canario.jpeg" alt="Canary">
+                    <p>Canary</p>
+                </div>
+                <div id="animal6" class="animal" draggable="true" data-animal="cat">
+                    <img src="../Assets/Animales/Gato.jpeg" alt="Cat">
+                    <p>Cat</p>
+                </div>
+                <div id="animal7" class="animal" draggable="true" data-animal="elephant">
+                    <img src="../Assets/Animales/Elefante.jpeg" alt="Elephant">
+                    <p>Elephant</p>
+                </div>
+                <div id="animal8" class="animal" draggable="true" data-animal="monkey">
+                    <img src="../Assets/Animales/Mono.jpeg" alt="Monkey">
+                    <p>Monkey</p>
+                </div>
+                <div id="animal9" class="animal" draggable="true" data-animal="cow">
+                    <img src="../Assets/Animales/Vaca.png" alt="Cow">
+                    <p>Cow</p>
+                </div>
+                <div id="animal10" class="animal" draggable="true" data-animal="toucan">
+                    <img src="../Assets/Animales/Tucan.jpeg" alt="Toucan">
+                    <p>Toucan</p>
+                </div>
+                <div id="animal11" class="animal" draggable="true" data-animal="zebra">
+                    <img src="../Assets/Animales/Cebra.jpeg" alt="Zebra">
+                    <p>Zebra</p>
+                </div>
+                <div id="animal12" class="animal" draggable="true" data-animal="chicken">
+                    <img src="../Assets/Animales/Gallina.jpeg" alt="Chicken">
+                    <p>Chicken</p>
+                </div>
+                <div id="animal13" class="animal" draggable="true" data-animal="snake">
+                    <img src="../Assets/Animales/Serpiente.jpg" alt="Snake">
+                    <p>Snake</p>
+                </div>
+                <div id="animal14" class="animal" draggable="true" data-animal="duck">
+                    <img src="../Assets/Animales/Pato.jpeg" alt="Duck">
+                    <p>Duck</p>
+                </div>
+                <div id="animal15" class="animal" draggable="true" data-animal="dog">
+                    <img src="../Assets/Animales/Perro.jpeg" alt="Dog">
+                    <p>Dog</p>
+                </div>
+                <div id="animal16" class="animal" draggable="true" data-animal="hippo">
+                    <img src="../Assets/Animales/Hipopotamo.jpeg" alt="Hippo">
+                    <p>Hippo</p>
+                </div>
+                <div id="animal17" class="animal" draggable="true" data-animal="bat">
+                    <img src="../Assets/Animales/Murcielago.jpeg" alt="Bat">
+                    <p>Bat</p>
+                </div>
+                <div id="animal18" class="animal" draggable="true" data-animal="rabbit">
+                    <img src="../Assets/Animales/Conejo.jpeg" alt="Rabbit">
+                    <p>Rabbit</p>
+                </div>
+                <div id="animal19" class="animal" draggable="true" data-animal="flamingo">
+                    <img src="../Assets/Animales/Flamenco.jpeg" alt="Flamingo">
+                    <p>Flamingo</p>
+                </div>
+                <div id="animal20" class="animal" draggable="true" data-animal="chick">
+                    <img src="../Assets/Animales/Pollito.jpeg" alt="Chick">
+                    <p>Chick</p>
+                </div>
+                <div id="animal21" class="animal" draggable="true" data-animal="giraffe">
+                    <img src="../Assets/Animales/Jirafa.jpg" alt="Giraffe">
+                    <p>Giraffe</p>
+                </div>
+                <div id="animal22" class="animal" draggable="true" data-animal="crocodile">
+                    <img src="../Assets/Animales/Cocodrilo.jpeg" alt="Crocodile">
+                    <p>Crocodile</p>
+                </div>
+                <div id="animal23" class="animal" draggable="true" data-animal="pig">
+                    <img src="../Assets/Animales/Cerdo.jpeg" alt="Pig">
+                    <p>Pig</p>
+                </div>
+                <div id="animal24" class="animal" draggable="true" data-animal="sheep">
+                    <img src="../Assets/Animales/Oveja.jpeg" alt="Sheep">
+                    <p>Sheep</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="../Js/From_Animal.js"></script>
+    </body>
+</html>

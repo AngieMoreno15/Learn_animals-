@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Matemasie&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.523), rgba(255, 255, 255, 0.436)), url(../Assets/Pagina_Principal/Fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.inicio .contenido {
+    max-width: 1100px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.inicio header {
+    display: flex;
+    justify-content: center; /* Esto centra el contenido en relación al header */
+    margin-top: 30px;
+    padding: 0 30px;
+    align-items: center;
+    background-color: #387F39;
+    border-radius: 25px;
+    position: relative; /* Necesario para que funcione el posicionamiento absoluto */
+    height: 60px;
+}
+
+.inicio .atras {
+    position: absolute;
+    left: 30px; /* Esto asegura que el icono esté a la izquierda */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.inicio .atras a {
+    color: #F6E96B;
+    font-size: 35px; /* Ajusta el tamaño del icono de la flecha */
+    text-decoration: none;
+}
+
+#level-display {
+    font-size: 30px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+    line-height: 1;
+    position: absolute;
+    left: 50%; /* Mueve el centro de la caja del texto */
+    transform: translateX(-50%); /* Centra la caja del texto */
+}
+
+.nombre-principal {
+    margin: 30px 0;
+}
+
+.nombre-principal h1 {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #f6e86ba2;
+    border-radius: 30px;
+    color: black;
+    font-family: "Matemasie", sans-serif;
+    text-align: center;
+    padding: 10px 20px; /* Añade relleno para mejor apariencia */
+}
+
+#puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);  /*Ajusta el tamaño según tu imagen */
+    grid-template-rows: repeat(4, 100px); /* Ajusta el tamaño según tu imagen */
+    gap: 2px;
+    justify-content: center;
+}
+
+.puzzle-piece {
+    width: 100px; /*Ajusta el tamaño según tu imagen */
+    height: 100px; /*Ajusta el tamaño según tu imagen */
+    background-size: 400px 400px; /*Debe coincidir con el tamaño de la imagen */
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.puzzle-container {
+    margin-bottom: 30px;
+    position: relative;
+    width: max-content;
+    width: 400px; /* ajusta según el tamaño de tu puzzle */
+    height: 400px; /* ajusta según el tamaño de tu puzzle */
+}
+
+#puzzle {
+    margin-top: 50px; /* deja un margen si es necesario para que los botones no tapen el puzzle */
+}
+
+#pause-btn {
+    display: none;
+}
+
+.selected-piece {
+    border: 2px solid #387F39; /*Resalta la pieza con un borde azul */
+    box-shadow: 0 0 10px #A2CA71; /*Agrega una sombra azul*/ 
+}
+
+#play-btn{
+    background-color: #2ecc71;
+    color: #ffffff;
+    width: 40px; /* Ajusta según el tamaño de tu botón */
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 230px;
+    left: 970px; /*Ajusta según el espacio que quieras a la izquierda*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-btn:hover {
+    background-color: #145a32;
+}
+
+#pause-btn{
+    background-color: #2382d6 ;
+    color: #ffffff;
+    width: 40px; /* Ajusta según el tamaño de tu botón */
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 230px;
+    left: 970px; /*Ajusta según el espacio que quieras a la izquierda*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#pause-btn:hover {
+    background-color: #2326d6 ;
+}
+
+#shuffle-btn{
+    background-color: #f54452;
+    color: #ffffff;
+    width: 40px; /* Ajusta según el tamaño de tu botón */
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 280px;
+    left: 970px; /*Ajusta según el espacio que quieras a la izquierda*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shuffle-btn:hover {
+    background-color: #f00b1c;
+}
+
+#restart-btn{
+    background-color: #f1c40f;
+    color: #000000;
+    width: 120px; /* Ajusta según el tamaño de tu botón */
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#restart-btn:hover {
+    background-color: #ecf312;
+}

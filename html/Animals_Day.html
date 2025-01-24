@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Animals Day 🐸🐼🐷</title>
+        <link rel="shortcut icon" href="../Assets/Pagina Principal/Principal.png">
+        <link rel="stylesheet" href="../Css/Animals_Day.css">
+        <script src="https://kit.fontawesome.com/5e6427e208.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Sección Inicio Nav -->
+        <section id="inicio" class="inicio">
+            <div class="contenido">
+                <header>
+                    <div class="atras">
+                        <a href="../index.html">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                        </a>
+                    </div>
+                </header>
+                <div class="nombre-principal">
+                    <h1>Learn about animals</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Animales -->
+        <section id="animales" class="animales">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-button" onclick="showAllAnimals()">All</button>
+                    <button class="tab-button" onclick="showCategory('aquatic')">Aquatic Animals</button>
+                    <button class="tab-button" onclick="showCategory('terrestrial')">Terrestrial Animals</button>
+                    <button class="tab-button" onclick="showCategory('air')">Air Animals</button>
+                </div>
+                <div id="cards-container" class="cards-container">
+                    <!-- Cards se llenarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+        <script src="../Js/Animals_Day.js"></script>
+    </body>
+</html>

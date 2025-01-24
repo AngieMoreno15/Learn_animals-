@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Matemasie&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.523), rgba(255, 255, 255, 0.436)), url(../Assets/Pagina_Principal/Fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.inicio .contenido {
+    max-width: 1100px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.inicio header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 30px;
+    align-items: center;
+    background-color: #387F39;
+    border-radius: 25px;
+    position: relative;
+    height: 60px;
+}
+
+.inicio .atras {
+    position: absolute;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inicio .atras a {
+    color: #F6E96B;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+#level-display {
+    font-size: 30px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nombre-principal {
+    margin: 30px 0;
+}
+
+.nombre-principal h1 {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #f6e86ba2;
+    border-radius: 30px;
+    color: black;
+    font-family: "Matemasie", sans-serif;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* Puzzle Container */
+#puzzle-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;
+    gap: 10px; /* Espacio entre los botones */
+    margin-bottom: 20px; /* Espacio debajo de los botones */
+}
+
+/* Botón Play */
+#play-btn {
+    background-color: #2ecc71; /* Color verde */
+    color: #ffffff;
+    width: 50px; /* Ajusta el tamaño según tu preferencia */
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-btn:hover {
+    background-color: #145a32; /* Verde oscuro al pasar el mouse */
+}
+
+/* Botón Pause */
+#pause-btn {
+    background-color: #2382d6; /* Color azul */
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Oculto inicialmente */
+}
+
+#pause-btn:hover {
+    background-color: #1a5ca4; /* Azul oscuro al pasar el mouse */
+}
+
+/* Botón Shuffle */
+#shuffle-btn {
+    background-color: #f54452; /* Color rojo */
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shuffle-btn:hover {
+    background-color: #c72e38; /* Rojo oscuro al pasar el mouse */
+}
+
+/* Grid del puzzle */
+#puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: 400px 400px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.selected-piece {
+    border: 2px solid #387F39;
+    box-shadow: 0 0 10px #A2CA71;
+}
+
+/* Botón de reinicio centrado debajo del puzzle */
+#restart-btn {
+    background-color: #f1c40f;
+    color: #000000;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    margin: 20px auto 0; /* Margen superior y centra el botón */
+    display: block;
+}
+
+#restart-btn:hover {
+    background-color: #ecf312;
+}
+
+/* Responsive para dispositivos pequeños */
+@media (max-width: 768px) {
+    #puzzle-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    #puzzle-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(4, 100px);
+        gap: 2px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .puzzle-piece {
+        width: 100px;
+        height: 100px;
+        background-size: 400px 400px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    #button-container button {
+        width: 40px;
+        height: 40px;
+    }
+
+    #restart-btn {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    .selected-piece {
+        border: 2px solid #387F39;
+        box-shadow: 0 0 10px #A2CA71;
+    }
+}
