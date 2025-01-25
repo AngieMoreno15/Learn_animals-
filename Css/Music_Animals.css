@@ -190,6 +190,63 @@ body {
     line-height: 0; /* Asegura que el tamaño del botón y el tamaño de la fuente no interfieran */
 }
 
+@media (max-width: 900px) {
+    #video-card {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #73bba38a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        flex-direction: column;
+        color: white;
+    }
+
+    #video-card.hidden {
+        display: none;
+    }
+
+    #video-container {
+        position: relative;
+        width: 90%; /* Se ajusta al 90% del ancho de la pantalla */
+        max-width: 800px;  /* Mantiene el ancho máximo para pantallas más grandes */
+        height: 50vw; /* Altura proporcional al ancho de la pantalla (50% del ancho) */
+        overflow: hidden;
+        background: black;
+    }
+
+    #video-player {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Botón amarillo sobre el video */
+    #close-btn {
+        position: absolute; /* Asegura que se posicione sobre el video */
+        top: 10px;
+        right: 10px; /* Alineación ajustada para pantallas más pequeñas */
+        width: 50px; /* Tamaño reducido del botón */
+        height: 50px; /* Tamaño reducido del botón */
+        font-size: 30px; /* Tamaño de la fuente ajustado */
+        cursor: pointer;
+        color: #000000;
+        background-color: #F6E96B; /* Amarillo */
+        border-radius: 50%; /* Hace el fondo redondo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        text-align: center;
+        line-height: 0;
+        z-index: 1100; /* Asegura que el botón esté por encima del video */
+    }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .nombre-principal h1 {

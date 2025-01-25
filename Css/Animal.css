@@ -142,6 +142,7 @@ button:active {
 }
 
 /* Media Queries */
+/* Media Queries */
 @media (max-width: 1024px) {
     .inicio header {
         padding: 10px;
@@ -164,6 +165,7 @@ button:active {
     #images-container {
         width: 100%;
         gap: 15px;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     }
 
     #images-container img {
@@ -179,32 +181,11 @@ button:active {
 
 @media (max-width: 768px) {
     .inicio header {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        justify-content: center; /* Asegura que los elementos se alineen bien en columna */
-        gap: 10px; /* Agrega espacio entre los elementos del header */
-        position: relative; /* Necesario para posicionar correctamente el botón */
-    }
-
-    .inicio .atras {
-        left: 10px;
-        font-size: 25px;
-        margin-bottom: 10px; /* Añadido para separar el ícono del texto */
-        margin-top: 15px;
-    }
-
-    #level-info {
-        font-size: 20px;
-    }
-
-    .nombre-principal h1 {
-        margin: 20px;
-        font-size: 1.5rem;
+        padding: 10px;
     }
 
     #images-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     }
 
     #images-container img {
@@ -213,8 +194,28 @@ button:active {
     }
 
     button {
-        font-size: 13px;
-        padding: 8px 12px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio header {
+        padding: 5px;
+    }
+
+    #images-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+
+    #images-container img {
+        width: 80px;
+        height: 80px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 8px;
     }
 }
 

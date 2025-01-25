@@ -83,68 +83,65 @@ body {
     margin: 40px auto;
 }
 
+/* Contenedor de los botones */
 #button-container {
     display: flex;
     justify-content: center; /* Centra los botones horizontalmente */
-    align-items: center;
+    align-items: center; /* Alinea los botones verticalmente */
+    flex-wrap: wrap; /* Permite que los botones se ajusten a varias líneas en pantallas pequeñas */
     gap: 10px; /* Espacio entre los botones */
-    margin-bottom: 20px; /* Espacio debajo de los botones */
+    margin-top: 20px; /* Espacio superior */
 }
 
-/* Botón Play */
+/* Estilo de los botones */
+button {
+    background-color: #3498db; /* Color de fondo */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover para los botones */
+button:hover {
+    background-color: #2980b9; /* Color de fondo cuando se pasa el ratón */
+}
+
+/* Iconos de los botones */
+button i {
+    font-size: 20px; /* Tamaño del icono */
+}
+
+/* Botones individuales */
+#restart-btn {
+    background-color: #f1c40f; /* Botón de reinicio de color amarillo */
+}
+
+#restart-btn:hover {
+    background-color: #f39c12; /* Cambio de color al pasar el mouse */
+}
+
+/* Botones de pausa, play y shuffle */
 #play-btn {
     background-color: #2ecc71; /* Color verde */
-    color: #ffffff;
-    width: 50px; /* Ajusta el tamaño según tu preferencia */
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#play-btn:hover {
-    background-color: #145a32; /* Verde oscuro al pasar el mouse */
-}
-
-/* Botón Pause */
 #pause-btn {
     background-color: #2382d6; /* Color azul */
-    color: #ffffff;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none; /* Oculto inicialmente */
 }
 
-#pause-btn:hover {
-    background-color: #1a5ca4; /* Azul oscuro al pasar el mouse */
-}
-
-/* Botón Shuffle */
 #shuffle-btn {
     background-color: #f54452; /* Color rojo */
-    color: #ffffff;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#shuffle-btn:hover {
-    background-color: #c72e38; /* Rojo oscuro al pasar el mouse */
-}
+/* Asegura que los botones se ajusten bien en pantallas más pequeñas */
 
 /* Grid del puzzle */
 #puzzle-grid {
@@ -167,24 +164,6 @@ body {
 .selected-piece {
     border: 2px solid #387F39;
     box-shadow: 0 0 10px #A2CA71;
-}
-
-/* Botón de reinicio centrado debajo del puzzle */
-#restart-btn {
-    background-color: #f1c40f;
-    color: #000000;
-    width: 120px;
-    height: 40px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    font-size: 20px;
-    margin: 20px auto 0; /* Margen superior y centra el botón */
-    display: block;
-}
-
-#restart-btn:hover {
-    background-color: #ecf312;
 }
 
 /* Responsive para dispositivos pequeños */
@@ -211,9 +190,12 @@ body {
         cursor: pointer;
     }
 
-    #button-container button {
-        width: 40px;
-        height: 40px;
+    #button-container {
+        flex-direction: column; /* Los botones se apilan verticalmente en pantallas pequeñas */
+    }
+
+    button {
+        width: 80%; /* Los botones ocupan el 80% del ancho de la pantalla */
     }
 
     #restart-btn {

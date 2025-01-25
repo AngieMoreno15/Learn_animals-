@@ -146,6 +146,10 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.animal.selected {
+    border: 3px solid green;
+}
+
 #checkButton {
     padding: 10px 20px;
     font-size: 16px;
@@ -162,16 +166,15 @@ body {
     background-color: #0056b3;
 }
 
-/* Media Queries */
+/* Para pantallas de hasta 1024px */
 @media (max-width: 1024px) {
-    /* Ajustes para pantallas de tablet o menores */
     .inicio header {
         padding: 10px;
     }
 
     .inicio .atras {
+        left: 10px;
         font-size: 30px;
-        left: 15px;
     }
 
     .nombre-principal h1 {
@@ -179,71 +182,113 @@ body {
         margin: 0 40px;
     }
 
+    /* Contenedor de los animales en fila horizontal */
     .animals {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas en lugar de 6 */
-    }
-
-    .animal {
-        width: 120px; /* Reducir el tamaño de los animales */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Ajustes para pantallas más pequeñas (smartphones en posición horizontal) */
-    .inicio header {
-        flex-direction: column;
-        height: auto;
+        display: flex;             /* Establecemos flexbox para un layout horizontal */
+        flex-wrap: nowrap;         /* Deshabilitamos el salto de línea */
+        justify-content: flex-start;  /* Alineamos las imágenes al inicio de la fila */
+        gap: 15px;                 /* Espacio entre las imágenes */
+        overflow-x: auto;          /* Permite desplazamiento horizontal si no caben todas las imágenes */
         padding: 20px;
-        justify-content: center;
-    }
-
-    .inicio .atras {
-        left: 10px;
-        font-size: 15px;
-        margin-top: 5px;
-    }
-
-    .nombre-principal h1 {
-        font-size: 1.5rem;
-        margin: 15px;
-    }
-
-    .animals {
-        grid-template-columns: repeat(4, 1fr); /* 3 columnas por fila */
+        margin: 0 auto;
+        max-width: 100%;           /* Aseguramos que el contenedor no se salga del ancho de la pantalla */
     }
 
     .animal {
-        width: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajustes para pantallas más pequeñas (smartphones en posición vertical) */
-    .inicio header {
-        flex-direction: column;
-        padding: 5px;
+        width: 150px;              /* Definimos un tamaño fijo para las imágenes */
+        height: 150px;
+        flex-shrink: 0;            /* Evita que las imágenes se compriman */
+        text-align: center;
     }
 
-    .inicio .atras {
-        font-size: 20px;
-        left: 5px;
-    }
-
-    .nombre-principal h1 {
-        font-size: 1.25rem;
-        margin: 10px;
-    }
-
-    .animals {
-        grid-template-columns: 1fr; /* 1 columna por fila */
-    }
-
-    .animal {
-        width: 80px;
+    .habitat {
+        width: 250px;
+        height: 250px;
     }
 
     #checkButton {
-        padding: 8px 15px;
+        padding: 8px 16px;
         font-size: 14px;
+    }
+}
+
+/* Para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .inicio header {
+        padding: 8px;
+    }
+
+    .animals {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+
+    .animal {
+        width: 100%;
+        max-width: 100px;
+    }
+
+    .habitat {
+        width: 250px;         /* Reducir el tamaño de los hábitats */
+        height: 250px;
+    }
+
+    .habitat h2 {
+        font-size: 1rem;      /* Reducir el tamaño de la fuente en el título */
+        padding: 3px;         /* Ajustar el relleno para no ocupar demasiado espacio */
+    }
+
+    #checkButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .inicio header {
+        padding: 8px;
+    }
+
+    .animals {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas pequeñas */
+    }
+
+    .animal {
+        width: 100px; /* Ajustamos aún más el tamaño de los animales */
+    }
+
+    .habitat {
+        width: 200px; /* Ajuste para pantallas aún más pequeñas */
+        height: 200px;
+    }
+
+    #checkButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    .inicio header {
+        padding: 5px;
+    }
+
+    .animals {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas extra pequeñas */
+    }
+
+    .animal {
+        width: 80px; /* Ajustamos el tamaño de los animales a pantallas muy pequeñas */
+    }
+
+    .habitat {
+        width: 150px; /* Tamaño ajustado para pantallas móviles */
+        height: 150px;
+    }
+
+    #checkButton {
+        padding: 5px 10px;
+        font-size: 10px;
     }
 }

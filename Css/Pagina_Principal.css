@@ -279,6 +279,21 @@ body{
     margin: 10px 0px;
 }
 
+footer {
+    background-color: #387F39; /* Fondo verde */
+    color: white; /* Color del texto */
+    text-align: center;
+    padding: 10px 0; /* Espaciado interior para el pie de página */
+    font-size: 14px;
+}
+
+.footer-line {
+    width: 100%;
+    height: 4px; /* Altura de la línea */
+    background-color: #2e6b2f; /* Un verde más oscuro para la línea */
+    margin-bottom: 10px; /* Separación entre la línea y el texto */
+}
+
 /* Media Queries */
 
 @media (max-width: 1024px) {
@@ -307,15 +322,60 @@ body{
         margin: 0 auto;  /* Asegura que siga centrada */
     }
 
+    /* Contenedor de las cards */
     .card-container {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Cambiar a "space-around" para mejor espaciado */
     }
 
-    .card img {
-        width: 100%;
-        height: auto;
+    /* Estilo de la card */
+    .card {
+        width: 45%; /* Ajusta el ancho de las tarjetas a un 45% en lugar de auto */
+        margin-bottom: 30px;
     }
+
+    /* Efecto hover en las tarjetas */
+    .card-container .card:hover {
+        transform: scale(1.05); /* Reduce el tamaño del hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Imágenes dentro de las cards */
+    .card img {
+        width: 100%; /* Ajusta el tamaño de la imagen a todo el ancho de la tarjeta */
+        height: 250px; /* Define una altura fija para todas las imágenes */
+        object-fit: cover; /* Asegura que la imagen se recorte y se ajuste bien */
+        margin: 0;
+        border-radius: 10px; /* Reduce el radio de bordes para un mejor ajuste */
+    }
+
+    /* Títulos dentro de las cards */
+    .card-content h3 {
+        font-size: 24px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+        margin-bottom: 8px;
+        margin-left: 10px;
+        color: #000000;
+    }
+
+    /* Descripción dentro de las cards */
+    .card-content p {
+        color: #5b5a54;
+        font-size: 14px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+        line-height: 1.4;
+        margin-left: 10px;
+    }
+
+    /* Botón dentro de la card */
+    .card-content .card_button {
+        font-size: 18px; /* Ajusta el tamaño de la fuente */
+        padding: 10px 30px; /* Ajusta el padding para que no se vea tan grande */
+        margin: 16px 20px; /* Ajusta el margen */
+        border-radius: 20px;
+    }
+
 
     .container-informacion {
         flex-direction: column; /* Pone los elementos uno debajo del otro */
@@ -382,15 +442,205 @@ body{
 }
 
 @media (max-width: 480px) {
+    /* Contenedor principal */
+    .inicio .contenido {
+        max-width: 100%;
+        margin: 0 10px; /* Espaciado más pequeño */
+        color: #ffffff;
+    }
+
+    /* Header */
+    .inicio header {
+        flex-direction: column; /* Pone los elementos en una columna */
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    /* Logo */
     .inicio .logo {
-        font-size: 16px;
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+        justify-content: center; /* Centra el logo */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+
+    .inicio .logo i {
+        margin-right: 10px; /* Espaciado más pequeño */
+        padding: 5px;
+    }
+
+    /* Enlaces de navegación */
+    #inicio header nav a {
+        font-size: 16px; /* Tamaño de fuente más pequeño */
+        padding: 5px 15px; /* Menos espacio alrededor de los enlaces */
+    }
+
+    #inicio header nav a:hover {
+        border-bottom: 2px solid #73BBA3;
+    }
+
+    /* Fila */
+    .inicio .fila {
+        flex-direction: column; /* Los elementos se apilan en lugar de estar en fila */
+        margin-top: 20px;
+        padding-bottom: 10px; /* Menos espacio debajo */
+    }
+
+    /* Estilo para el contenedor de información */
+    #info-zoo {
+        background-color: #387f39b0;
+        border-radius: 20px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Añadir padding */
+    }
+
+    .inicio .fila .info {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        margin-top: 20px; /* Agrega margen superior */
     }
 
     .inicio .fila .info h2 {
-        font-size: 30px;
+        margin: 10px;
+        font-size: 24px; /* Ajusta el tamaño de fuente */
+        font-family: "Matemasie", sans-serif;
+        text-align: center;
     }
 
     .inicio .fila .info p {
-        font-size: 20px;
+        margin: 20px;
+        font-size: 18px; /* Ajusta el tamaño de fuente */
+        padding: 0px 20px;
     }
+
+    .inicio .fila .info .contenedor-img {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .inicio .fila .info .contenedor-img img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .inicio .fila .info button {
+        font-size: 16px;
+        padding: 10px 30px;
+        border: 2px solid #A2CA71;
+        color: #ffffff;
+        background: linear-gradient(to right, #88D66C, #73BBA3);
+        transition: .5s;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    .inicio .fila .info button:hover {
+        transform: scale(1.1);
+    }
+
+    /* Icono de navegación */
+    #icono-nav {
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        line-height: 25px;
+        border-radius: 50%;
+        transition: .3s;
+        cursor: pointer;
+        display: block; /* Asegura que sea visible */
+    }
+
+    #icono-nav:hover {
+        background-color: #FFCF81;
+    }
+
+    /* Estilos para juegos */
+    .juegos {
+        padding: 30px 20px; /* Ajusta el padding */
+        background-color: #f7fb7aae;
+    }
+
+    .container-titulo-juegos h2 {
+        font-size: 30px; /* Ajusta el tamaño del título */
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección de la fila a columna */
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%; /* Asegura que la carta ocupe todo el ancho */
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 100%; /* Asegura que las imágenes se adapten */
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+        margin-left: 10px;
+        color: #000000;
+    }
+
+    .card-content p {
+        color: #5b5a54;
+        font-size: 14px;
+        line-height: 1.3;
+        margin-left: 10px;
+    }
+
+    .card-content .card_button {
+        font-size: 18px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Estilo para la información */
+    .informacion {
+        padding: 0px 20px;
+    }
+
+    .container-titulo-informacion h2 {
+        font-size: 30px; /* Ajusta el tamaño del título */
+    }
+
+    .container-informacion,
+    .container-metodologia {
+        flex-direction: column; /* Cambia la dirección de las filas a columnas */
+    }
+
+    .container-metodologia .card {
+        margin: 10px 0;
+        padding: 20px;
+        width: 100%; /* Asegura que cada card ocupe el 100% del ancho */
+    }
+
+    .container-metodologia .card img {
+        width: 120px; /* Ajusta el tamaño de la imagen */
+    }
+
+    .container-metodologia .card h3 {
+        font-size: 20px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .container-metodologia .card p {
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+
+    /* Interno */
+    .interno {
+        display: flex;
+        text-align: center;
+        margin: 10px 0;
+        flex-direction: column; /* Cambia la dirección de la fila a columna */
+    }
+
 }

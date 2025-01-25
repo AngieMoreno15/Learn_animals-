@@ -249,3 +249,72 @@ Image container styling
         padding: 6px;
     }
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nombre-principal h1 {
+        font-size: 40px;
+        margin: 0px 30px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .tab-button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    #cards-container {
+        gap: 15px;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1em;
+    }
+
+    .card-content button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nombre-principal h1 {
+        font-size: 30px;
+        margin: 0px 10px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .tab-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    #cards-container {
+        gap: 10px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .card-content h3 {
+        font-size: 1em;
+    }
+
+    .card-content button {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+}
